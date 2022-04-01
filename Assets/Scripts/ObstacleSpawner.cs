@@ -24,9 +24,9 @@ public class ObstacleSpawner : MonoBehaviour
 
         int rand = Random.Range(0, obstacles.Count);
         // movedObstacle = obstacles[rand];
-
+        // -2.053518f
         float newZ = obstacles[obstacles.Count - 1].transform.position.z + offset;
-        movedObstacle.transform.position = new Vector3(-2.053518f, -4.845822f, newZ);
+        movedObstacle.transform.position = new Vector3(Random.Range(-2.053518f - 0.2f, -2.053518f + 0.2f), -4.845822f, newZ);
         obstacles.Add(movedObstacle);
     }
 }
